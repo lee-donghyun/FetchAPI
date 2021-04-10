@@ -24,10 +24,11 @@ const getWeather = async (stnIds) => {
     let response = await fetch(url,{
         method:'GET',
         headers:{
-            
+
         }
     });
     let info = await response.json();
+    console.log(info);
 
     console.log(info);
 
