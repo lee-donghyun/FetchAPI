@@ -21,12 +21,7 @@ const getWeather = async (stnIds) => {
     console.log(url.toString());
 
 
-    let response = await fetch(url,{
-        method:'GET',
-        headers:{
-
-        }
-    });
+    let response = await fetch(url);
     let info = await response.json();
     console.log(info);
 
