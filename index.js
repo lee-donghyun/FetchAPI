@@ -9,7 +9,7 @@ const getDAY = () => {
 
 const getWeather = async (stnIds) => {
 
-    let url = new URL('http://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList');
+    let url = new URL('https://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList');
 
     let names=['ServiceKey','dataType','dataCd','dateCd','startDt','endDt','stnIds'];
     let values=[API_KEY,'JSON','ASOS','DAY',getDAY() - 2,getDAY() -1,stnIds];
