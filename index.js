@@ -21,11 +21,15 @@ const getWeather = async (stnIds) => {
     console.log(url.toString());
 
 
-    let response = await fetch(url);
-    let info = await response.json();
-    console.log(info);
+    let response = await fetch(url,{
+        method:'GET',
+        referrer:'http://127.0.0.1:5500',
+        mode:'cors',
+    });
+    // let info = await response.json();
+    console.log(response);
 
-    console.log(info);
+    console.log(response);
 
 
     
@@ -33,4 +37,4 @@ const getWeather = async (stnIds) => {
 
 
 getWeather(108);
-root.innerHTML = `${getDAY()}`;
+root.innerHTML = `${getDAY(108)}`;
