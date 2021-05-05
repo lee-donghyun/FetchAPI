@@ -22,3 +22,7 @@ const onclicktest = () => {
 const updateSigninStatus = () => {
     console.log('isSignedIn',GoogleAuth.isSignedIn);
 }
+const ShowList = async () => {
+    let response = await gapi.client.gmail.users.labels.list({});
+    console.log('response',response);
+}
