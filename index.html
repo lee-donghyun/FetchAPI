@@ -9,29 +9,12 @@
 </head>
 
 <body>
-  <script src="https://apis.google.com/js/api.js"></script>
-  <script>
-
-    let GoogleAuth; // Google Auth object.
-    const initClient = async () => {
-      await gapi.client.init({
-        'apiKey': '258563955545-o3qj8nebt6mar2qnbrkortvb2beocgim.apps.googleusercontent.com',
-        'clientId': 't9uE4Txc1PfKnxR0LNLtVzYQ',
-        'scope': 'https://mail.google.com/',
-        'discoveryDocs': ['https://gmail.googleapis.com/$discovery/rest?version=v1']
-      });
-
-      GoogleAuth = gapi.auth2.getAuthInstance();
-      GoogleAuth.isSignedIn.listen(updateSigninStatus);
-
-    }
-    initClient();
-    const onclickButton = () => {
-      console.log('log in to google');
-      GoogleAuth.signIn();
-    }
-  </script>
-  <button onclick='onclickButton()'>hello world!</button>
+  <div id="root">
+    <button onclick='onclickButton()'>init google gapi!</button>
+    <button onclick="onclicktest()">log in</button>
+  </div>
+  <script src="./api.js"></script>
+  <script src="./google.js"></script>
 </body>
 
 </html>
