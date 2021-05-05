@@ -1,8 +1,8 @@
 let GoogleAuth; // Google Auth object.
 const initClient = async () => {
     await gapi.client.init({
-        'apiKey': '258563955545-o3qj8nebt6mar2qnbrkortvb2beocgim.apps.googleusercontent.com',
-        'clientId': 't9uE4Txc1PfKnxR0LNLtVzYQ',
+        'clientId': '258563955545-o3qj8nebt6mar2qnbrkortvb2beocgim.apps.googleusercontent.com',
+        'apiKey': 't9uE4Txc1PfKnxR0LNLtVzYQ',
         'scope': 'https://mail.google.com/',
         'discoveryDocs': ['https://gmail.googleapis.com/$discovery/rest?version=v1']
     });
