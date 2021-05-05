@@ -19,3 +19,6 @@ const onclicktest = () => {
     console.log('log in');
     GoogleAuth.signIn();
 }
+const updateSigninStatus = () => {
+    console.log('isSignedIn',GoogleAuth.isSignedIn);
+}
